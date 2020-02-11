@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app/Layout/App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from 'react-router-dom';
 
 const rootEl = document.getElementById('root');
 
 let render = () => { 
-    ReactDOM.render(<App />, rootEl);
-}; 
+    ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, rootEl);
+}; // configuring react router using <BrowserRouter/>
 
 render();
 
