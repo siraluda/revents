@@ -6,6 +6,7 @@ const initialState = {
     data: 40
 }
 
+// Here we add functionality to our actions
 const incrementCounter = (state) => {
     return {...state, data: state.data + 1};
 }

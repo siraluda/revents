@@ -8,7 +8,7 @@ const mapStatetoProps = (state) => ({
     data: state.test.data
 })
 
-
+// actions allow us to use our reducers to update our state in the store
 const actions = {
     incrementCounter,
     decrementCounter
