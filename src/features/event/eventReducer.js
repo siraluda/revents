@@ -54,17 +54,19 @@ const initialState = [
 ];
 
 const createEvent = (state, payload) => {
+    // [Create a copy of the list of events, and then append the newly created event]
     return [...state, payload.event]
 }
 
 const updateEvent = (state, payload) => {
+  //Create a copy of the list of all events excluding the updated event, and then append updated event
     return [
         ...state.filter(event => event.id !== payload.event.id), payload.event
     ]
 }
 
 const deleteEvent = (state, payload) => {
-    return [
+    return [ // Create a new copy of all events whose id doesnt much the eventId
         ...state.filter(event => event.id !== payload.eventId)
     ]
 }

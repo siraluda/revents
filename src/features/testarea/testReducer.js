@@ -14,7 +14,7 @@ const decrementCounter = (state) => {
     return {...state, data: state.data - 1};
 }
 
-
+// this is exported to rootreducer.js
 export default createReducer(initialState, {
     [INCREMENT_COUNTER]: incrementCounter,
     [DECREMENT_COUNTER]: decrementCounter

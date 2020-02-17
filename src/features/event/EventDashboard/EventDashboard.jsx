@@ -43,4 +43,4 @@ class EventDashboard extends Component {
     }
 }
 
-export default connect(mapState, actions)(EventDashboard);
+export default connect(mapState, actions)(EventDashboard); // remember concept of closures
