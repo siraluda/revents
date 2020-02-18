@@ -28,11 +28,13 @@ const mapState = (state, ownProps) => {
   }
 }
 
+// action creators imported as props to take data from users
 const actions = {
   createEvent,
   updateEvent
 }
 
+// Validating form fields
 const validate = combineValidators({
   title: isRequired({message: 'The event title is required'}),
   category: isRequired({message: 'the category is required'}),
