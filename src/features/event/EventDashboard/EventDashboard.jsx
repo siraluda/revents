@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import EventList from '../EventList/EventList'
 import { createEvent, deleteEvent, updateEvent } from '../eventActions'
 import LoadingComponent from '../../../app/Layout/LoadingComponent';
+import EventActivity from '../EventActivity/EventActivity';
 
 
 const mapState = (state) => ({
@@ -36,7 +37,7 @@ class EventDashboard extends Component {
                       deleteEvent={this.handleDeleteEvent} />
                 </Grid.Column>
                 <Grid.Column width={6}>
-                    <h2>Activity feed</h2>
+                    <EventActivity/>
                 </Grid.Column>
             </Grid>
                 

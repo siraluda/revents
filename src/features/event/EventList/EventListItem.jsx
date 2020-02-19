@@ -3,7 +3,6 @@ import { Segment, Item, Icon, List, Button } from 'semantic-ui-react';
 import EventListAttendees from './EventListAttendees';
 import { Link } from 'react-router-dom';
 
-
 class EventListItem extends Component {
     render() {
       const {event, deleteEvent} = this.props //destructuring to clean up code 
