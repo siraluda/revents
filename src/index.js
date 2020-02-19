@@ -7,8 +7,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from './app/store/configureStore';
 import ScrollToTop from "./app/common/util/ScrollToTop";
+import { loadEvents } from './features/event/eventActions';
 
 const store = configureStore(); // instantiating the store 
+store.dispatch(loadEvents()) // using the store to dispatch the redux thunk action creator directly
 const rootEl = document.getElementById('root');
 
 let render = () => { 
