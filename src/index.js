@@ -9,10 +9,12 @@ import { Provider } from 'react-redux';
 import ReduxToastr from "react-redux-toastr";
 import { configureStore } from './app/store/configureStore';
 import ScrollToTop from "./app/common/util/ScrollToTop";
-import { loadEvents } from './features/event/eventActions';
+// import { loadEvents } from './features/event/eventActions'; We remove load events becuase we're now taking data from firestore
 
 const store = configureStore(); // instantiating the store 
-store.dispatch(loadEvents()) // using the store to dispatch the redux thunk action creator directly
+
+//store.dispatch(loadEvents()) // using the store to dispatch the redux thunk action creator directly
+
 const rootEl = document.getElementById('root');
 
 let render = () => { 
