@@ -31,7 +31,9 @@ let render = () => {
 // configuring react router using <BrowserRouter/>. And Wrapping our app with <Provider/> and setting store instance as a prop..
 //..to connect to redux
 
-render();
+store.firebaseAuthIsReady.then(() => {
+    render(); // Here, render wont run unless Authentication is ready and has been loaded by firebase
+})
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

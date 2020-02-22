@@ -11,7 +11,7 @@ const DateInput = ({input, width, placeholder, meta: {touched, error}, ...rest})
                 placeholderText={placeholder}
                 selected={input.value ? new Date(input.value) : null} // converting the date into a javascript object
                 onChange={input.onChange} // this will make redux form aware of any changes
-                onBlur={input.onBlur} // this will prompt validation when we click in and ou of the date field
+                onBlur={input.onBlur} // this will prompt validation check when we click in and out of the date field
                 onChangeRaw={(e)=> e.preventDefault()} // this prevents the user from typing into the date field
             />
             {touched && error && <Label basic color='red'>{error}</Label>}

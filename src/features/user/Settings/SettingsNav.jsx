@@ -21,10 +21,10 @@ const SettingsNav = () => {
                   color="grey"
                   content="Account"
                 />
-                <Menu.Item>My Account</Menu.Item>
+                <Menu.Item as={NavLink} to='/settings/account' >My Account</Menu.Item>
               </Menu>
             </Fragment>
     )
 }
 
-export default SettingsNav
+export default SettingsNav;
